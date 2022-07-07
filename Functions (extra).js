@@ -31,6 +31,18 @@ console.log(`Extra 1: Sum is ${checkArray(testArray)}`);
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "shoppingCartTotal" which calculates the total due to the shop.
 */
+let socks = {price:69,name:"socks",id:123,quantity:2}
+let shoes = {price:420,name:"shoes",id:124,quantity:2}
+let shirts = {price:365,name:"shirts",id:125,quantity:4}
+let shoppingCart = [socks,shoes,shirts]
+let shoppingCartTotal = function(a){
+    let totalCost = 0;
+    for(i=0;i<a.length;i++){
+        totalCost = totalCost+(a[i].price*a[i].quantity);
+    }
+    return totalCost;
+}
+console.log(`Extra 2: Cost is ${shoppingCartTotal(shoppingCart)}`);
 
 
 
@@ -38,15 +50,37 @@ console.log(`Extra 1: Sum is ${checkArray(testArray)}`);
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "addToShoppingCart" which receives a new object, adds it to shoppingCart and returns the total number of items in the shoppingCart.
 */
+let hat = {price:22,name:"hat",id:321,quantity:1}
+let addToShoppingCart = function (cart,newItem){
+    console.log(`Extra 3: New cart size: ${cart.push(newItem)}`);
+}
+addToShoppingCart(shoppingCart,hat);
 
-/* WRITE YOUR ANSWER HERE */
 
 /* EXTRA 4
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "maxShoppingCart" which receives the shoppingCart array and returns the most expensive item in it.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let maxShoppingCart = function (cart) {
+    let expensiveItem = {price:0};
+    //console.log(`cart length`,cart.length);
+    for(i=0;i<cart.length;i++){
+        if(cart[i].price>expensiveItem.price){
+            for (var variableKey in expensiveItem){
+                if (expensiveItem.hasOwnProperty(variableKey)){
+                    delete expensiveItem[variableKey];
+                }                
+            }
+            Object.assign(expensiveItem,cart[i]);
+            //console.log(`debug`, expensiveItem);
+        }
+    }
+    console.log(expensiveItem);
+}
+console.log(`Extra 4: The most expensive item is:`);
+maxShoppingCart(shoppingCart);
+
 
 /* EXTRA 5
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
