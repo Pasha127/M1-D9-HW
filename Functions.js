@@ -154,8 +154,13 @@ console.log(`EX 8: Upper First: "${original05String}" --->  ${upperFirst(origina
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
-
+let cutString = function (str) {
+    strArray = str.split("");
+    strArray.pop();
+    strArray.shift();
+    console.log(strArray);
+}
+cutString(original05String);
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
