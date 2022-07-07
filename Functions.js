@@ -18,7 +18,7 @@ let rectArea = function (l1,l2){
     return l1*l2;
 }
 let area = rectArea(side01,side02);
-console.log(`The area of a rectangle with sides ${side01}cm and ${side02}cm is: ${area}cm^2.`);
+console.log(`EX 1: The area of a rectangle with sides ${side01}cm and ${side02}cm is: ${area}cm^2.`);
 
 /* EXERCISE 2
  Write a function called "crazySum" which receives two integers as parameters.
@@ -34,7 +34,7 @@ let crazySum = function (int1,int2){
 }
 let value01 = 4;
 let value02 = 5;
-console.log("EX 2 Crazy Sum:",`|${4}+${5}|=${crazySum(value01,value02)}`,"  ---    CrAzY:",`|${4}+${4}|=${crazySum(4,4)}`);
+console.log("EX 2: Crazy Sum:",`|${4}+${5}|=${crazySum(value01,value02)}`,"  ---    CrAzY:",`|${4}+${4}|=${crazySum(4,4)}`);
 
 
 /* EXERCISE 3
@@ -50,7 +50,7 @@ let crazyDiff = function (x,y) {
     }
 
 }
-console.log("EX 3 Crazy Dif:",`|${4}-${14}|=${crazyDiff(4,14)}`,"  ---  CrAzY:",`|${19}-${22}|=${crazyDiff(19,22)}` );
+console.log("EX 3: Crazy Dif:",`|${4}-${14}|=${crazyDiff(4,14)}`,"  ---  CrAzY:",`|${19}-${22}|=${crazyDiff(19,22)}` );
 
 /* EXERCISE 4
  Write a function called "boundary" which accept an integer parameter n and returns true if n is within 20 and 100 (included) or if n it's equal to 400.
@@ -63,21 +63,59 @@ let boundry = function (n) {
         return false;
     }
 } 
-console.log("EX 4 Boundry: 10", boundry(10),"20",boundry(20),"50",boundry(50),"100",boundry(100),"201",boundry(201),"400",boundry(400));
+console.log("EX 4: Boundry: 10", boundry(10),"20",boundry(20),"50",boundry(50),"100",boundry(100),"201",boundry(201),"400",boundry(400));
 
 /* EXERCISE 5
  Write a function called "strivify" which accepts a string as a parameter.
  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let original05String = "Try to survive!";
+let test05String = "Strive to survive!";
+let strivify = function (str){
+    let strArray = str.split(" ");
+    //console.log("debug", str, strArray);
+    let firstWord = strArray[0].toLowerCase();
+    if(firstWord === "strive"){
+        return str;
+    }else{
+        let output = strArray;
+        output.splice(0,1,"Strive");
+        output = output.join(" ")
+        output = output.toString();
+        return output;
+    }
+}
+console.log(`EX 5-A: Try to survive! ---> ${strivify(original05String)}`);
+console.log(`EX 5-B: Strive to survive! ---> ${strivify(test05String)}`);
+
 
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
  HINT: Modulus Operator
 */
 
-/* WRITE YOUR ANSWER HERE */
+let check3and7 = function (n){
+    if(n>=0){
+        if(n%3 === 0){
+            console.log(`EX 06-A: ${n} is a multiple of 3`);
+            
+        }else{
+            console.log(`EX 06-A: ${n} is not a multiple of 3`);
+        }
+        if(n%7 === 0){
+            console.log(`EX 06-B: ${n} is a multiple of 7`);
+            
+        }else{
+            console.log(`EX 06-B: ${n} is not a multiple of 7`);
+        }
+        
+    }else{
+        console.log("Please enter a valid number");
+    }
+}
+check3and7(3);
+
 
 /* EXERCISE 7
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
