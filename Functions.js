@@ -34,7 +34,7 @@ let crazySum = function (int1,int2){
 }
 let value01 = 4;
 let value02 = 5;
-console.log(`${value02}+${value01}=${crazySum(value01,value02)}.`)
+console.log("EX 2 Crazy Sum:",`|${4}+${5}|=${crazySum(value01,value02)}`,"  ---    CrAzY:",`|${4}+${4}|=${crazySum(4,4)}`);
 
 
 /* EXERCISE 3
@@ -42,7 +42,7 @@ console.log(`${value02}+${value01}=${crazySum(value01,value02)}.`)
  It should return triple their absolute difference if the given number is greater than 19.
 */
 
-let crazyDiff = function (x,y) {
+let crazyDiff = function (x,y) {    
     if(x>19||y>19){
         return Math.abs(x-y)*3;
     }else{
@@ -50,12 +50,20 @@ let crazyDiff = function (x,y) {
     }
 
 }
+console.log("EX 3 Crazy Dif:",`|${4}-${14}|=${crazyDiff(4,14)}`,"  ---  CrAzY:",`|${19}-${22}|=${crazyDiff(19,22)}` );
 
 /* EXERCISE 4
  Write a function called "boundary" which accept an integer parameter n and returns true if n is within 20 and 100 (included) or if n it's equal to 400.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let boundry = function (n) {
+    if((n>=20 && n<=100) || n===400){
+        return true;
+    }else{
+        return false;
+    }
+} 
+console.log("EX 4 Boundry: 10", boundry(10),"20",boundry(20),"50",boundry(50),"100",boundry(100),"201",boundry(201),"400",boundry(400));
 
 /* EXERCISE 5
  Write a function called "strivify" which accepts a string as a parameter.
