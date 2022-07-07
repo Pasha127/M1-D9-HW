@@ -121,13 +121,34 @@ check3and7(3);
  Write a function called "reverseString" which programmatically reverses a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR ANSWER HERE */
-
+let reverseString = function (str){
+    let strArray = str.split("");
+    strArray = strArray.reverse();
+    str = strArray.join("");
+    console.log(str);
+    return str;
+}
+console.log(`EX 7: Reverse String: "${original05String}" --->  ${reverseString(original05String)}`)
 /* EXERCISE 8
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let upperFirst = function (str) {
+    strArray = str.split(" ");
+    for(i=0; i<strArray.length; i++){
+        word = strArray[i];
+        wordArray = word.split("");
+        wordArray[0] = wordArray[0].toUpperCase();
+        //console.log(wordArray[0]);
+        word = wordArray.join("");
+        strArray[i] = word;
+    }
+    str = strArray.join(" ");
+    return str;
+
+}
+
+console.log(`EX 8: Upper First: "${original05String}" --->  ${upperFirst(original05String)}`)
 
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
