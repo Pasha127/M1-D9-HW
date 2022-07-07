@@ -11,15 +11,31 @@ ASSIGNMENT RULES
 /* EXERCISE 1
  Write a function called "area" which receives 2 parameters (l1, l2) and calculates the area of the associated rectangle.
 */
+let side01 = 2;
+let side02 = 3;
 
-/* WRITE YOUR ANSWER HERE */
+let rectArea = function (l1,l2){
+    return l1*l2;
+}
+let area = rectArea(side01,side02);
+console.log(`The area of a rectangle with sides ${side01}cm and ${side02}cm is: ${area}cm^2.`);
 
 /* EXERCISE 2
  Write a function called "crazySum" which receives two integers as parameters.
  It should return the sum of those two values, but if the two values are the same then it should return their sum multiplied by 3.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let crazySum = function (int1,int2){
+    if(int1 === int2){
+        return (int1+int2)*3;
+    }else{
+        return (int1+int2);
+    }
+}
+let value01 = 4;
+let value02 = 5;
+console.log(`${value02}+${value01}=${crazySum(value01,value02)}.`)
+
 
 /* EXERCISE 3
  Write a function called "crazyDiff" that computes the absolute difference between a given number and 19.
