@@ -101,13 +101,42 @@ console.log(`Extra 5: The latest item is:`, latestShoppingCart(shoppingCart));
  The function loops and prints a random number between 0 and 9 until the random number is bigger than x for three times in a row.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let loopUntil = function (x){
+    if(x>0 && x<9){
+        let newArray =[];
+        do{
+            newArray = giveMeRandom(3);
+            //console.log(newArray);        //<--------------------uncomment to print all randomizations
+        }while(newArray[0]<=x || newArray[1]<=x || newArray[3]<=x);
+        console.log(newArray);
+        
+    }
+}
+console.log("Extra 6: Loop Until:");
+loopUntil(7)
+
 
 /* EXTRA 7
  Write a function called "average" which receives an array and returns the average numerical value. The function automatically skips non-numeric entries in the array.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let testArray02 = giveMeRandom(7);
+let average = function (a) {
+    let aSum = 0;
+    let avg = 0;
+    let numArray = a.filter(element => typeof element === 'number');
+    for(i=0;i<numArray.length;i++){
+        aSum += numArray[i];
+        //console.log(aSum);
+    }
+    avg = aSum/numArray.length;
+    return avg;
+
+    
+}
+console.log(`Extra 7-A: The average of ${testArray02} is:`, average(testArray02) );
+console.log(`Extra 7-B: The average of ${[1,null,1,1,'A',1]} is:`, average([1,null,1,1,'A',1]) );
+
 
 /* EXTRA 8
  Write a function called "longest" to find the longest string from a given array of strings.
