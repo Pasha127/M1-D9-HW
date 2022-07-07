@@ -158,15 +158,24 @@ let cutString = function (str) {
     strArray = str.split("");
     strArray.pop();
     strArray.shift();
-    console.log(strArray);
+    str = strArray.join("");
+    return str;    
 }
+
 cutString(original05String);
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR ANSWER HERE */
-
+let giveMeRandom = function (n) {
+    let newArray = [];
+    for (i=0; i<n; i++){
+        newArray[i] = (Math.floor(Math.random()*10));
+    }
+    return newArray;
+    
+}
+console.log(`EX 9: Give me a random array of length ${5}  ------> ${giveMeRandom(5)}`);
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
 */
