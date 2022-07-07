@@ -76,10 +76,10 @@ let maxShoppingCart = function (cart) {
             //console.log(`debug`, expensiveItem);
         }
     }
-    console.log(expensiveItem);
+    return expensiveItem;
 }
-console.log(`Extra 4: The most expensive item is:`);
-maxShoppingCart(shoppingCart);
+console.log(`Extra 4: The most expensive item is:`, maxShoppingCart(shoppingCart));
+
 
 
 /* EXTRA 5
@@ -87,7 +87,14 @@ maxShoppingCart(shoppingCart);
  Create a function called "latestShoppingCart" which receives the shoppingCart array and returns the last item.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let latestShoppingCart = function (cart){
+    
+    lastItem = cart[cart.length-1];
+   return lastItem;
+
+}
+console.log(`Extra 5: The latest item is:`, latestShoppingCart(shoppingCart));
+
 
 /* EXTRA 6
  Create a function called "loopUntil" which receives an integer x between 0 and 9 as a parameter.
