@@ -141,8 +141,19 @@ console.log(`Extra 7-B: The average of ${[1,null,1,1,'A',1]} is:`, average([1,nu
 /* EXTRA 8
  Write a function called "longest" to find the longest string from a given array of strings.
 */
+let arrayOfStrings = ["Who","let","the", "dogs", "out?"]
+let longest = function (a) {
+    let longString = "";
+    for(i=0;i<a.length;i++){
+        if(a[i].length>longString.length){
+            longString = a[i];
+            //console.log(longString);
+        }//else{console.log("debug")}
+    }
+    return longString;
+}
+console.log(`Extra 8: The longest string out of ${arrayOfStrings} is:`, longest(arrayOfStrings));
 
-/* WRITE YOUR ANSWER HERE */
 
 /* EXTRA 9
  Write a function to create a very simple anti spam filter for your mailbox. The function takes a string emailContent, and returns a boolean.
