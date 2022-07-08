@@ -135,7 +135,7 @@ console.log(`EX 7: Reverse String: "${original05String}" --->  ${reverseString(o
 
 let upperFirst = function (str) {
     strArray = str.split(" ");
-    for(i=0; i<strArray.length; i++){
+    for(let i=0; i<strArray.length; i++){
         word = strArray[i];
         wordArray = word.split("");
         wordArray[0] = wordArray[0].toUpperCase();
@@ -169,7 +169,7 @@ cutString(original05String);
 
 let giveMeRandom = function (n) {
     let newArray = [];
-    for (i=0; i<n; i++){
+    for (let i=0; i<n; i++){
         newArray[i] = (Math.floor(Math.random()*10));
     }
     return newArray;

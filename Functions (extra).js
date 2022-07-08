@@ -7,7 +7,7 @@
 
 let giveMeRandom = function (n) {
     let newArray = [];
-    for (i=0; i<n; i++){
+    for (let i=0; i<n; i++){
         newArray[i] = (Math.floor(Math.random()*10));
     }
     return newArray;    
@@ -15,7 +15,7 @@ let giveMeRandom = function (n) {
 let testArray = giveMeRandom(5);
 let checkArray = function (a) {
     let bigSum=0;
-    for(i=0;i<a.length;i++){
+    for(let i=0;i<a.length;i++){
         element = a[i];
         if(element>5){
             console.log(`Element#${i+1}:${element} is larger than five.`)
@@ -37,7 +37,7 @@ let shirts = {price:365,name:"shirts",id:125,quantity:4}
 let shoppingCart = [socks,shoes,shirts]
 let shoppingCartTotal = function(a){
     let totalCost = 0;
-    for(i=0;i<a.length;i++){
+    for(let i=0;i<a.length;i++){
         totalCost = totalCost+(a[i].price*a[i].quantity);
     }
     return totalCost;
@@ -49,7 +49,7 @@ console.log(`Extra 2: Cost is ${shoppingCartTotal(shoppingCart)}`);
 /* EXTRA 3
  In your eCommerce you have an array of objects called shoppingCart. Each one of these objects has a price, a name, an id and the quantity to be shipped.
  Create a function called "addToShoppingCart" which receives a new object, adds it to shoppingCart and returns the total number of items in the shoppingCart.
-*/
+*/0
 let hat = {price:22,name:"hat",id:321,quantity:1}
 let addToShoppingCart = function (cart,newItem){
     console.log(`Extra 3: New cart size: ${cart.push(newItem)}`);
@@ -65,7 +65,7 @@ addToShoppingCart(shoppingCart,hat);
 let maxShoppingCart = function (cart) {
     let expensiveItem = {price:0};
     //console.log(`cart length`,cart.length);
-    for(i=0;i<cart.length;i++){
+    for(let i=0;i<cart.length;i++){
         if(cart[i].price>expensiveItem.price){
             for (var variableKey in expensiveItem){
                 if (expensiveItem.hasOwnProperty(variableKey)){
@@ -125,7 +125,7 @@ let average = function (a) {
     let aSum = 0;
     let avg = 0;
     let numArray = a.filter(element => typeof element === 'number');
-    for(i=0;i<numArray.length;i++){
+    for(let i=0;i<numArray.length;i++){
         aSum += numArray[i];
         //console.log(aSum);
     }
@@ -144,7 +144,7 @@ console.log(`Extra 7-B: The average of ${[1,null,1,1,'A',1]} is:`, average([1,nu
 let arrayOfStrings = ["Who","let","the", "dogs", "out?"]
 let longest = function (a) {
     let longString = "";
-    for(i=0;i<a.length;i++){
+    for(let i=0;i<a.length;i++){
         if(a[i].length>longString.length){
             longString = a[i];
             //console.log(longString);
@@ -165,7 +165,7 @@ let emailContent02= "Hello, this is a sCam email."
 let emailContent03= "Hello, this is a legit email."
 let isSpam = function (str) {
     let strArray = str.split(" ");
-    for(i=0;i<strArray.length;i++){
+    for(let i=0;i<strArray.length;i++){
         let checkWord = strArray[i].toLowerCase();
         if(checkWord === "spam" || checkWord === "scam"){
             return true
@@ -204,7 +204,7 @@ console.log(`Extra 10: How many days have passed since ${inputDate}?`, elapsedDa
 
 let matrixGenerator = function (x,y){
     let generatedArray = [];
-    for(i=0;i<y;i++){
+    for(let i=0;i<y;i++){
         let newXArr = [];
         let newYArr =[];
         for(j=0;j<x;j++){
