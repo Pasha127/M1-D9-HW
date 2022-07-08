@@ -181,7 +181,18 @@ console.log(`Extra 9-C: Is "${emailContent03}" spam?:`, isSpam(emailContent03));
  Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let inputDate = new Date('1/1/2022');
+
+let elapsedDays = function (d1) {
+    let today = new Date();
+    let diff = today.getTime() - d1.getTime();
+    let totalDays = Math.ceil(diff / (1000 * 3600 * 24));
+    return totalDays;
+}
+
+console.log(`Extra 10: How many days have passed since ${inputDate}?`, elapsedDays(inputDate),`days`);
+
+
 
 /* EXTRA 11
  Write a function called "matrixGenerator" which receives two integers, x and y, as parameters.
