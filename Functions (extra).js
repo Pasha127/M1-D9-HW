@@ -207,7 +207,7 @@ let matrixGenerator = function (x,y){
     for(let i=0;i<y;i++){
         let newXArr = [];
         let newYArr =[];
-        for(j=0;j<x;j++){
+        for(let j=0;j<x;j++){
             
             newXArr[j]=j.toString();            
         }
