@@ -202,7 +202,24 @@ console.log(`Extra 10: How many days have passed since ${inputDate}?`, elapsedDa
  "10","11","12"]
 */
 
-/* WRITE YOUR ANSWER HERE */
+let matrixGenerator = function (x,y){
+    let generatedArray = [];
+    for(i=0;i<y;i++){
+        let newXArr = [];
+        let newYArr =[];
+        for(j=0;j<x;j++){
+            
+            newXArr[j]=j.toString();            
+        }
+        newYArr[i] =newXArr;
+        generatedArray[i] = newYArr[i];
+        //console.log(`debug`, newYArr);
+    }
+    console.log(generatedArray);
+    
+}
+matrixGenerator(3,2);
+
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
