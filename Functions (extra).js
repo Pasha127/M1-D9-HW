@@ -160,7 +160,22 @@ console.log(`Extra 8: The longest string out of ${arrayOfStrings} is:`, longest(
  The function should return true if the emailContent string does not contain the words SPAM or SCAM.
 */
 
-/* WRITE YOUR ANSWER HERE */
+let emailContent01= "Hello, this is a spAm email."
+let emailContent02= "Hello, this is a sCam email."
+let emailContent03= "Hello, this is a legit email."
+let isSpam = function (str) {
+    let strArray = str.split(" ");
+    for(i=0;i<strArray.length;i++){
+        let checkWord = strArray[i].toLowerCase();
+        if(checkWord === "spam" || checkWord === "scam"){
+            return true
+        }
+    }
+    return false;
+}
+console.log(`Extra 9-A: Is "${emailContent01}" spam?:`, isSpam(emailContent01));
+console.log(`Extra 9-B: Is "${emailContent02}" spam?:`, isSpam(emailContent02));
+console.log(`Extra 9-C: Is "${emailContent03}" spam?:`, isSpam(emailContent03));
 
 /* EXTRA 10
  Write a function that receives a date as a parameter and calculates the number of days passed since the given date.
